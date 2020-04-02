@@ -484,11 +484,19 @@ form .skillallocation #submit {
 }
 
 /* Screen adjustments */
-@media only screen and (min-height: 1260px) and (min-width: 972px) {
+@media only screen and (min-height: 1260px) {
     .character-sheet {
-        max-width: 78vh;
         height: calc(100vh - 56px);
         max-height: calc(100vh - 56px);
+    }
+    .bottom-row {
+        flex-direction: column-reverse;
+        max-height: 70%;
+    }
+}
+@media only screen and (min-width: 972px) {
+    .character-sheet {
+        max-width: 78vh;
     }
     .bottom-row {
         flex-direction: column-reverse;
