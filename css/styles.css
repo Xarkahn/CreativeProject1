@@ -484,7 +484,7 @@ form .skillallocation #submit {
 }
 
 /* Screen adjustments */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-height: 1260px) and (min-width: 972px) {
     .character-sheet {
         max-width: 78vh;
         height: calc(100vh - 56px);
