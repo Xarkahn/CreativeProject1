@@ -70,6 +70,10 @@ body {
     text-indent: 3em;
     text-align: left;
 }
+.landing h1 {
+    text-indent: 0;
+    text-align: center;
+}
 
 /* Character Sheet */
 .character-sheet {
@@ -137,13 +141,16 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
+.top-row2 {
+    margin: 0 auto;
+}
 .bottom-row {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -155,7 +162,7 @@ body {
     overflow-x: auto;
 }
 .armor2 {
-    min-width: 728px;
+    min-width: 744px;
     display: flex;
     flex-direction: row;
 }
@@ -165,21 +172,21 @@ body {
     max-width: 95vw; 
     margin-left: auto; 
     margin-right: auto;
+    margin-bottom: auto;
 }
 .skills {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
     border-spacing: 0;
     font-variant: small-caps;
     text-align: center;
 }
 .class-skill {
-    max-width: 1em;
     background-color: black;
     color: white;
 }
 .class-skill div {
+    min-width: 3ex;
     margin: auto;
     writing-mode: vertical-rl;
 }
@@ -233,9 +240,13 @@ body {
     top: -.3em;
     right: -1em;
 }
+.saving-throws {
+    min-width: 500px;
+}
 .attacks {
     text-align: center;
     margin: auto;
+    min-width: 500px;
 }
 .attacks th {
     font-weight: normal;
@@ -484,23 +495,22 @@ form .skillallocation #submit {
 }
 
 /* Screen adjustments */
-@media only screen and (min-height: 1260px) {
-    .character-sheet {
-        height: calc(100vh - 56px);
-        max-height: calc(100vh - 56px);
-    }
-    .bottom-row {
-        flex-direction: column-reverse;
-        max-height: 70%;
-    }
-}
 @media only screen and (min-width: 972px) {
     .character-sheet {
-        max-width: 78vh;
+        max-width: 972px;
     }
     .bottom-row {
-        flex-direction: column-reverse;
-        max-height: 70%;
+        max-height: 850px;
+    }
+    .skills {
+        margin-bottom: 66px;
+    }
+}
+@media only screen and (min-width: 972px) and (min-height: 1260px) {
+    .character-sheet {
+        width: 78vh;
+        height: calc(100vh - 56px);
+        max-height: calc(100vh - 56px);
     }
 }
 @media only screen and (max-width: 413px) {
